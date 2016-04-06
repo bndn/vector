@@ -25,6 +25,7 @@
     },
     "fsharp": {
         "files": [
+            "VectorTest.fs"
         ]
     }
 }
