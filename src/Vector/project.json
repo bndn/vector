@@ -1,9 +1,13 @@
 {
     "version": "0.0.0",
-    "description": "",
+    "description": "A library for working with 3-dimensional vectors and vector arithmetic",
     "authors": [
+        "Kasper Kronborg Isager <kasi@itu.dk>"
     ],
     "tags": [
+        "vector",
+        "3d",
+        "arithmetic"
     ],
     "projectUrl": "https://github.itu.dk/bndn/vector",
     "licenseUrl": "https://github.itu.dk/bndn/vector/blob/master/LICENSE.md",
@@ -13,10 +17,6 @@
             "type": "build",
             "version": "1.0.0-*"
         }
-    },
-
-    "commands": {
-        "run": "run"
     },
 
     "frameworks": {
@@ -30,7 +30,8 @@
     },
     "fsharp": {
         "files": [
-            "Program.fs"
+            "Vector.fsi",
+            "Vector.fs"
         ]
     }
 }
