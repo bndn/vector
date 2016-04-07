@@ -24,7 +24,7 @@ exception RoundNegativeDeicmalsException
 /// <param name=y>The y component of the vector.</param>
 /// <param name=z>The z component of the vector.</param>
 /// <returns>The created vector.</returns>
-let mkVector x y z = V(x, y, z)
+let make x y z = V(x, y, z)
 
 /// <summary>
 /// Get the x component of a vector.

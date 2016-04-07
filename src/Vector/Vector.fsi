@@ -25,7 +25,7 @@ exception NormaliseZeroLengthException
 exception RoundNegativeDeicmalsException
 
 /// Create a vector with three components.
-val mkVector : float -> float -> float -> Vector
+val make : float -> float -> float -> Vector
 
 /// Get the x component of a vector.
 val getX : Vector -> float
