@@ -100,8 +100,9 @@ let normalise (V(x, y, z) as v) =
 /// Round a vector to a specific number of decimals.
 /// </summary>
 /// <param name=v>The vector to round.</param>
+/// <param name=d>The number of decimals to round to.</param>
 /// <returns>The rounded vector.</returns>
-let round (V(x, y, z)) (d : int) =
+let round (V(x, y, z)) (d:int) =
   if d < 0 then raise RoundNegativeDeicmalsException
   let f = 10.0 ** float d
   V(round (x * f) / f, round (y * f) / f, round (z * f) / f)
