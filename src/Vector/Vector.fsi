@@ -3,44 +3,44 @@ module Vector
 
 [<Sealed>]
 type Vector =
-  /// <summary>
-  /// Negate a vector.
-  /// </summary>
-  /// <param name=v>The vector to negate.</param>
-  /// <returns>The negated vector.</returns>
-  static member (~-) : v:Vector -> Vector
+    /// <summary>
+    /// Negate a vector.
+    /// </summary>
+    /// <param name=v>The vector to negate.</param>
+    /// <returns>The negated vector.</returns>
+    static member (~-) : v:Vector -> Vector
 
-  /// <summary>
-  /// Compute the sum of two vector.
-  /// </summary>
-  /// <param name=u>The first vector.</param>
-  /// <param name=v>The second vector.</param>
-  /// <returns>The sum of the two vectors.</returns>
-  static member (+) : u:Vector * v:Vector -> Vector
+    /// <summary>
+    /// Compute the sum of two vector.
+    /// </summary>
+    /// <param name=u>The first vector.</param>
+    /// <param name=v>The second vector.</param>
+    /// <returns>The sum of the two vectors.</returns>
+    static member (+) : u:Vector * v:Vector -> Vector
 
-  /// <summary>
-  /// Compute the difference of two vectors.
-  /// </summary>
-  /// <param name=u>The first vector.</param>
-  /// <param name=v>The second vector.</param>
-  /// <returns>The difference of the two vectors.</returns>
-  static member (-) : u:Vector * v:Vector -> Vector
+    /// <summary>
+    /// Compute the difference of two vectors.
+    /// </summary>
+    /// <param name=u>The first vector.</param>
+    /// <param name=v>The second vector.</param>
+    /// <returns>The difference of the two vectors.</returns>
+    static member (-) : u:Vector * v:Vector -> Vector
 
-  /// <summary>
-  /// Multiply a vector by a scalar.
-  /// </summary>
-  /// <param name=s>The scalar to multiply the vector by.</param>
-  /// <param name=v>The vector to multiply.</param>
-  /// <returns>The multiplied vector.</returns>
-  static member (*) : s:float * v:Vector -> Vector
+    /// <summary>
+    /// Multiply a vector by a scalar.
+    /// </summary>
+    /// <param name=s>The scalar to multiply the vector by.</param>
+    /// <param name=v>The vector to multiply.</param>
+    /// <returns>The multiplied vector.</returns>
+    static member (*) : s:float * v:Vector -> Vector
 
-  /// <summary>
-  /// Compute the dot product of two vectors.
-  /// </summary>
-  /// <param name=u>The first vector.</param>
-  /// <param name=v>The second vector.</param>
-  /// <returns>The dot product of the two vectors.</returns>
-  static member (*) : u:Vector * v:Vector -> float
+    /// <summary>
+    /// Compute the dot product of two vectors.
+    /// </summary>
+    /// <param name=u>The first vector.</param>
+    /// <param name=v>The second vector.</param>
+    /// <returns>The dot product of the two vectors.</returns>
+    static member (*) : u:Vector * v:Vector -> float
 
 /// <summary>
 /// Raised in case of attempting to normalize a zero-length vector.

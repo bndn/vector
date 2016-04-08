@@ -2,10 +2,10 @@
 module Vector
 
 type Vector =
-  | V of float * float * float
-  override v.ToString() =
-    match v with
-    | V(x, y, z) -> "[" + x.ToString() + "," + y.ToString() + "," + z.ToString() + "]"
+    | V of float * float * float
+    override v.ToString() =
+        match v with
+        | V(x, y, z) -> "[" + x.ToString() + "," + y.ToString() + "," + z.ToString() + "]"
 
 /// <summary>
 /// Raised in case of attempting to normalize a zero-length vector.
@@ -92,9 +92,9 @@ let crossProduct (V(ux, uy, uz)) (V(vx, vy, vz)) = V(uy * vz - uz * vy, uz * vx 
 /// <param name=v>The vector to normalise.</param>
 /// <returns>The normalised vector.</returns>
 let normalise (V(x, y, z) as v) =
-  let m = magnitude v
-  if m = 0.0 then raise NormaliseZeroLengthException
-  V(x / m, y / m, z / m)
+    let m = magnitude v
+    if m = 0.0 then raise NormaliseZeroLengthException
+    V(x / m, y / m, z / m)
 
 /// <summary>
 /// Round a vector to a specific number of decimals.
@@ -103,46 +103,46 @@ let normalise (V(x, y, z) as v) =
 /// <param name=d>The number of decimals to round to.</param>
 /// <returns>The rounded vector.</returns>
 let round (V(x, y, z)) (d:int) =
-  if d < 0 then raise RoundNegativeDecimalsException
-  let f = 10.0 ** float d
-  V(round (x * f) / f, round (y * f) / f, round (z * f) / f)
+    if d < 0 then raise RoundNegativeDecimalsException
+    let f = 10.0 ** float d
+    V(round (x * f) / f, round (y * f) / f, round (z * f) / f)
 
 type Vector with
-  /// <summary>
-  /// Negate a vector.
-  /// </summary>
-  /// <param name=v>The vector to negate.</param>
-  /// <returns>The negated vector.</returns>
-  static member (~-) (V(x, y, z)) = V(-x, -y, -z)
+    /// <summary>
+    /// Negate a vector.
+    /// </summary>
+    /// <param name=v>The vector to negate.</param>
+    /// <returns>The negated vector.</returns>
+    static member (~-) (V(x, y, z)) = V(-x, -y, -z)
 
-  /// <summary>
-  /// Compute the sum of two vector.
-  /// </summary>
-  /// <param name=u>The first vector.</param>
-  /// <param name=v>The second vector.</param>
-  /// <returns>The sum of the two vectors.</returns>
-  static member (+) (V(ux, uy, uz), V(vx, vy, vz)) = V(ux + vx, uy + vy, uz + vz)
+    /// <summary>
+    /// Compute the sum of two vector.
+    /// </summary>
+    /// <param name=u>The first vector.</param>
+    /// <param name=v>The second vector.</param>
+    /// <returns>The sum of the two vectors.</returns>
+    static member (+) (V(ux, uy, uz), V(vx, vy, vz)) = V(ux + vx, uy + vy, uz + vz)
 
-  /// <summary>
-  /// Compute the difference of two vectors.
-  /// </summary>
-  /// <param name=u>The first vector.</param>
-  /// <param name=v>The second vector.</param>
-  /// <returns>The difference of the two vectors.</returns>
-  static member (-) (V(ux, uy, uz), V(vx, vy, vz)) = V(ux - vx, uy - vy, uz - vz)
+    /// <summary>
+    /// Compute the difference of two vectors.
+    /// </summary>
+    /// <param name=u>The first vector.</param>
+    /// <param name=v>The second vector.</param>
+    /// <returns>The difference of the two vectors.</returns>
+    static member (-) (V(ux, uy, uz), V(vx, vy, vz)) = V(ux - vx, uy - vy, uz - vz)
 
-  /// <summary>
-  /// Multiply a vector by a scalar.
-  /// </summary>
-  /// <param name=s>The scalar to multiply the vector by.</param>
-  /// <param name=v>The vector to multiply.</param>
-  /// <returns>The multiplied vector.</returns>
-  static member (*) (s, v) = multScalar v s
+    /// <summary>
+    /// Multiply a vector by a scalar.
+    /// </summary>
+    /// <param name=s>The scalar to multiply the vector by.</param>
+    /// <param name=v>The vector to multiply.</param>
+    /// <returns>The multiplied vector.</returns>
+    static member (*) (s, v) = multScalar v s
 
-  /// <summary>
-  /// Compute the dot product of two vectors.
-  /// </summary>
-  /// <param name=u>The first vector.</param>
-  /// <param name=v>The second vector.</param>
-  /// <returns>The dot product of the two vectors.</returns>
-  static member (*) (u, v) = dotProduct u v
+    /// <summary>
+    /// Compute the dot product of two vectors.
+    /// </summary>
+    /// <param name=u>The first vector.</param>
+    /// <param name=v>The second vector.</param>
+    /// <returns>The dot product of the two vectors.</returns>
+    static member (*) (u, v) = dotProduct u v
