@@ -15,7 +15,7 @@ exception NormaliseZeroLengthException
 /// <summary>
 /// Raised in case of attempting to round a vector to a negative number of decimals.
 /// </summary>
-exception RoundNegativeDeicmalsException
+exception RoundNegativeDecimalsException
 
 /// <summary>
 /// Create a vector with three components.
@@ -103,7 +103,7 @@ let normalise (V(x, y, z) as v) =
 /// <param name=d>The number of decimals to round to.</param>
 /// <returns>The rounded vector.</returns>
 let round (V(x, y, z)) (d:int) =
-  if d < 0 then raise RoundNegativeDeicmalsException
+  if d < 0 then raise RoundNegativeDecimalsException
   let f = 10.0 ** float d
   V(round (x * f) / f, round (y * f) / f, round (z * f) / f)
 

@@ -50,7 +50,7 @@ exception NormaliseZeroLengthException
 /// <summary>
 /// Raised in case of attempting to round a vector to a negative number of decimals.
 /// </summary>
-exception RoundNegativeDeicmalsException
+exception RoundNegativeDecimalsException
 
 /// <summary>
 /// Create a vector with three components.
