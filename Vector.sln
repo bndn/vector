@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{6CF22DF8-D7DB-4D61-BBF1-B9139C791204}") = "Vector", "src\Vector\Vector.xproj", "{232053CB-E970-453B-BB4B-194014BBE689}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Vector", "src\Vector\Vector.xproj", "{232053CB-E970-453B-BB4B-194014BBE689}"
 EndProject
-Project("{6CF22DF8-D7DB-4D61-BBF1-B9139C791204}") = "Vector.Test", "test\Vector.Test\Vector.Test.xproj", "{736E96DA-87AC-4600-BD1F-51742A22DC09}"
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Vector.Test", "test\Vector.Test\Vector.Test.xproj", "{736E96DA-87AC-4600-BD1F-51742A22DC09}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
